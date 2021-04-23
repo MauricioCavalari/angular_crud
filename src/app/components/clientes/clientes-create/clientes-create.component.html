@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="cliente.email" name="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Sexo</mat-label>
+            <mat-select [(ngModel)]="cliente.sexo" name="sexo">
+                <mat-option *ngFor="let sexo of generos" [value]="sexo.viewValue">
+                    {{sexo.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="addCliente()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
