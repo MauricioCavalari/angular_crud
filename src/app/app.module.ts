@@ -40,9 +40,11 @@ import { ProductRead2Component } from './components/product/product-read2/produc
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from  '@angular/common';
 
-import { ClientesCreateComponent } from './components/clientes/clientes-create/clientes-create.component';
 import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.component';
+import { ClientesCreateComponent } from './components/clientes/clientes-create/clientes-create.component';
 import { ClientesReadComponent } from './components/clientes/clientes-read/clientes-read.component';
+import { ClientesDeleteComponent } from './components/clientes/clientes-delete/clientes-delete.component';
+
 
 import {MatSelectModule} from '@angular/material/select';
 
@@ -66,7 +68,8 @@ registerLocaleData(localePt);
     ProductDeleteComponent,
     ClientesCreateComponent,
     ClienteCrudComponent,
-    ClientesReadComponent
+    ClientesReadComponent,
+    ClientesDeleteComponent
   ],
   imports: [
     BrowserModule,
