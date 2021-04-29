@@ -38,6 +38,7 @@ export class ClientesCreateComponent implements OnInit {
 
   addCliente(): void {
     this.clienteService.criarCliente(this.cliente).subscribe(() => {
+      this.clienteService.showMessage('Cliente Adicionado com sucesso!')
       this.router.navigate(['/clientes'])
     })
   }
