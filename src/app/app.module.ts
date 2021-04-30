@@ -44,10 +44,9 @@ import { ClienteCrudComponent } from './views/cliente-crud/cliente-crud.componen
 import { ClientesCreateComponent } from './components/clientes/clientes-create/clientes-create.component';
 import { ClientesReadComponent } from './components/clientes/clientes-read/clientes-read.component';
 import { ClientesDeleteComponent } from './components/clientes/clientes-delete/clientes-delete.component';
-
+import { ClientesUpdateComponent } from './components/clientes/clientes-update/clientes-update.component';
 
 import {MatSelectModule} from '@angular/material/select';
-
 
 registerLocaleData(localePt);
 
@@ -69,7 +68,8 @@ registerLocaleData(localePt);
     ClientesCreateComponent,
     ClienteCrudComponent,
     ClientesReadComponent,
-    ClientesDeleteComponent
+    ClientesDeleteComponent,
+    ClientesUpdateComponent
   ],
   imports: [
     BrowserModule,
