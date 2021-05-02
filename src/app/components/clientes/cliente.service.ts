@@ -38,7 +38,10 @@ export class ClienteService {
     return this.http.get<Cliente>(url)
   }
 
-
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.clienteURL}/${cliente.id}`;
+    return this.http.put<Cliente>(url, cliente)
+  }
 
   deleteCliente(id: any): Observable<Cliente> {
     const url = `${this.clienteURL}/${id}`;
